@@ -25,10 +25,10 @@ public class NBody{
 		double T = Double.parseDouble(args[0]);
 		double dt = Double.parseDouble(args[1]);
 		String filename = args[2];
-		double r = readRadius(filename);
+		double radius = readRadius(filename);
 		Planet[] planets = readPlanets(filename);
-		StdDraw.setXscale(-r, r);
-		StdDraw.setYscale(-r, r);
+		StdDraw.setXscale(-radius, radius);
+		StdDraw.setYscale(-radius, radius);
 		StdDraw.enableDoubleBuffering();
 		
 
