@@ -1,2 +1,2 @@
-# cs61b
-This project is to submit the CS61B Homework, lab, projects, etc.
+# CS61B
+This project is to submit the CS61B Homeworks, labs, projects, etc.
