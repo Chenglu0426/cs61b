@@ -21,7 +21,7 @@ public class ArrayDeque<T> {
 
     public void addFirst(T item) {
         if (size == items.length) {
-            resize(size * 4, 0, 0, size);
+            resize(size * 2, 0, 0, size);
         }
         resize(items.length, 0, 1, size);
         size++;
