@@ -42,6 +42,9 @@ public class ArrayDeque<T> {
             T res = items[0];
             resize(items.length, 1, 0, size - 1);
             size--;
+            if (items.length >= 4 * size) {
+                resize(items.length / 2, 0, 0, size);
+            }
             return res;
         }
     }
@@ -52,13 +55,24 @@ public class ArrayDeque<T> {
         } else {
             T res = items[size - 1];
             resize(items.length, 0, 0, size - 1);
+            size--;
+            if (items.length >= 4 * size) {
+                resize(items.length / 2, 0, 0, size);
+            }
             return res;
         }
     }
 
     public T get(int index) {
+        if (index >= size) {
+            return null;
+        }
         return items[index];
     }
 
-
+    public void printDeque() {
+        for (int i = 0; i < size; i++) {
+            System.out.print(items[i] + " ");
+        }
+    }
 }
