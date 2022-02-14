@@ -37,7 +37,6 @@ public class ArrayDeque<T> {
         items[size] = item;
         size++;
     }
-
     public T removeFirst() {
         if (size == 0) {
             return null;
