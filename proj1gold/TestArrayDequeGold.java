@@ -32,10 +32,12 @@ public class TestArrayDequeGold {
                         log += "removeFirst()\n";
                         testremovenumber = testarray.removeFirst();
                         targetremovenumber = targetarray.removeFirst();
+                        break;
                     case 3:
                         log += "removeLast()\n";
                         testremovenumber = testarray.removeLast();
                         targetremovenumber = targetarray.removeLast();
+                        break;
                     default:
                 }
                 assertEquals(log, targetremovenumber, testremovenumber);
