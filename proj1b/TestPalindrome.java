@@ -25,6 +25,15 @@ public class TestPalindrome {
     public void testIsoffbyonepalindrome() {
         CharacterComparator cc = new OffByOne();
         assertTrue(palindrome.isPalindrome("fe", cc));
-        assertTrue(palindrome.isPalindrome("cc", cc));
+        assertTrue(palindrome.isPalindrome("a", cc));
+        assertFalse(palindrome.isPalindrome("aabaa", cc));
+    }
+    @Test
+    public void testoffby5() {
+        CharacterComparator cc = new OffByN(5);
+        assertTrue(palindrome.isPalindrome("", cc));
+        assertTrue(palindrome.isPalindrome("a", cc));
+        assertTrue(palindrome.isPalindrome("bing", cc));
+        assertFalse(palindrome.isPalindrome("noon", cc));
     }
 }
