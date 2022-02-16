@@ -7,7 +7,7 @@ public class TestArrayDequeGold {
         ArrayDequeSolution<Integer> targetarray = new ArrayDequeSolution<>();
         String log = "";
         for (int i = 0; i < 1000; i++) {
-            if (testarray.size() == 0) {
+            if (testarray.size() < 2) {
                 int num = StdRandom.uniform(1000);
                 testarray.addFirst(num);
                 targetarray.addFirst(num);
